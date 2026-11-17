@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "schema": 1,
+  "cast": "cast.json",
+  "chapters": [
+    { "id": "ch01", "file": "ch01.json", "title": "Margin Call", "rev": 1 }
+  ]
+}

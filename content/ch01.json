@@ -1,0 +1,145 @@
+{
+  "id": "ch01",
+  "title": "Margin Call",
+  "steps": [
+    { "narr": "3:12 AM. Page 14. The white edge is forty steps away." },
+
+    { "say": "pica", "text": "nib. NIB. are you awake" },
+    { "say": "pica", "text": "the margin pinged. page 14 is going white" },
+    { "say": "pica", "text": "fast white. not the slow kind" },
+
+    { "choice": [
+      { "text": "Awake. Barely. Define “fast.”", "goto": "a1", "set": ["dry+=1"] },
+      { "text": "Already moving. Where’s the edge?", "goto": "a2", "set": ["bold+=1"] },
+      { "text": "It’s 3 AM. I was dreaming in color.", "goto": "a3", "set": ["warm+=1"] }
+    ] },
+
+    { "label": "a1" },
+    { "say": "pica", "text": "fast means the lamppost on the corner is gone" },
+    { "say": "pica", "text": "not faded. gone. i checked twice" },
+    { "goto": "j1" },
+
+    { "label": "a2" },
+    { "say": "pica", "text": "north side, past the lamppost" },
+    { "say": "pica", "text": "except there’s no lamppost. there WAS a lamppost" },
+    { "goto": "j1" },
+
+    { "label": "a3" },
+    { "say": "pica", "text": "me too. then i looked up and the sky had a hole in it" },
+    { "say": "pica", "text": "so. here we are" },
+    { "goto": "j1" },
+
+    { "label": "j1" },
+    { "say": "pica", "text": "patching hatch into the thread" },
+    { "narr": "Hatch joined the Margin." },
+    { "say": "hatch", "text": "Nib." },
+    { "say": "hatch", "text": "Stay behind my line." },
+    { "narr": "He has chalked a line across the road. Past it, the world is blank." },
+
+    { "label": "hub" },
+    { "choice": [
+      { "text": "Hatch, what does the white look like up close?", "once": true, "goto": "q_white" },
+      { "text": "Pica, how long until it hits the street?", "once": true, "goto": "q_time" },
+      { "text": "Okay. Heading in.", "goto": "go" }
+    ] },
+
+    { "label": "q_white" },
+    { "say": "hatch", "text": "Like the page forgot to finish." },
+    { "say": "hatch", "text": "No grain. No line. Look straight at it and your eyes slide off." },
+    { "say": "hatch", "text": "Don’t look straight at it." },
+    { "goto": "hub" },
+
+    { "label": "q_time" },
+    { "say": "pica", "text": "eleven minutes at this rate" },
+    { "say": "pica", "text": "…nine. it sped up while i was typing that", "typing": 1800 },
+    { "goto": "hub" },
+
+    { "label": "go" },
+    { "say": "nib", "text": "On my way." },
+    { "if": "bold>=1", "goto": "go_bold" },
+    { "say": "hatch", "text": "That wasn’t a request. …Fine. One step behind me." },
+    { "goto": "gap" },
+    { "label": "go_bold" },
+    { "say": "hatch", "text": "You were always going to cross it." },
+    { "say": "hatch", "text": "One step behind me. I mean it." },
+    { "goto": "gap" },
+
+    { "label": "gap" },
+    { "narr": "The road ends. Where the bridge was, there is only white and a long drop of nothing." },
+    { "say": "hatch", "text": "The bridge is gone." },
+    { "say": "pica", "text": "okay that’s. a lot of gone" },
+    { "say": "pica", "text": "nib, you could draw one. you’re the only one who can" },
+    { "wait": 1400 },
+    { "narr": "Someone joined the Margin." },
+    { "say": "stranger", "text": "don’t draw it", "typing": 1500 },
+    { "say": "pica", "text": "…who is that" },
+    { "say": "pica", "text": "i didn’t add anyone. the margin is CLOSED. nobody can just join" },
+    { "say": "stranger", "text": "a fresh line is the first thing it eats" },
+    { "say": "stranger", "text": "it follows the ink" },
+    { "say": "hatch", "text": "Who are you?" },
+    { "say": "stranger", "text": "someone who’s watched this happen before" },
+
+    { "label": "decide" },
+    { "choice": [
+      { "text": "Pica. Trace who this is.", "once": true, "goto": "trace" },
+      { "text": "“It”? What is “it”?", "once": true, "goto": "who_it" },
+      { "text": "Sorry, mystery person. Falling is worse.", "goto": "draw", "set": ["drew=1", "bold+=1"] },
+      { "text": "…Fine. We take the long way.", "goto": "longway", "set": ["heeded=1"] }
+    ] },
+
+    { "label": "trace" },
+    { "say": "pica", "text": "tracing…", "typing": 1200 },
+    { "say": "pica", "text": "huh. the sender id is blank. like literally blank" },
+    { "say": "pica", "text": "not hidden. BLANK. everything on the page has an id nib. everything" },
+    { "goto": "decide" },
+
+    { "label": "who_it" },
+    { "say": "stranger", "text": "you call it the white" },
+    { "say": "stranger", "text": "it thinks it’s fixing the page" },
+    { "say": "hatch", "text": "…" },
+    { "say": "hatch", "text": "That’s worse." },
+    { "goto": "decide" },
+
+    { "label": "draw" },
+    { "narr": "Nib’s pen touches the air. One black line leaps across the gap." },
+    { "say": "pica", "text": "it HOLDS. nib it holds" },
+    { "say": "hatch", "text": "Go. Now." },
+    { "narr": "Halfway across, the white turns toward the new line." },
+    { "say": "stranger", "text": "told you" },
+    { "narr": "The bridge starts vanishing from the middle outward." },
+    { "say": "hatch", "text": "RUN." },
+    { "narr": "They make it. The bridge doesn’t." },
+    { "goto": "landed" },
+
+    { "label": "longway" },
+    { "say": "stranger", "text": "…good" },
+    { "say": "hatch", "text": "Long way is eight minutes." },
+    { "say": "pica", "text": "we have nine. okay. okay okay okay" },
+    { "narr": "Eight minutes of running along the edge of the world." },
+    { "goto": "landed" },
+
+    { "label": "landed" },
+    { "narr": "Page 14, north side. The far edge." },
+    { "say": "pica", "text": "you’re through. you’re actually through" },
+    { "narr": "Where the lamppost stood, one thing survived the white: a stub of glowing line." },
+    { "say": "pica", "text": "that’s a sketch fragment!! the white leaves them sometimes. pick it up pick it up" },
+    { "give": "frag_lamp_head", "name": "Lamppost Glow", "note": "A fragment for the head slot" },
+    { "say": "stranger", "text": "keep it. it remembers the lamppost so you don’t have to" },
+    { "if": "heeded>=1", "goto": "thanks" },
+    { "say": "stranger", "text": "you didn’t listen. that’s okay. you will" },
+    { "goto": "finale" },
+    { "label": "thanks" },
+    { "say": "stranger", "text": "thank you for listening. most people don’t" },
+
+    { "label": "finale" },
+    { "say": "nib", "text": "You still haven’t told us who you are." },
+    { "wait": 1200 },
+    { "say": "stranger", "text": "i’m not on the page", "typing": 1800 },
+    { "say": "stranger", "text": "that’s why it can’t erase me" },
+    { "narr": "Her picture is a face with a line scribbled through it." },
+    { "say": "pica", "text": "nib i can’t see anything about her. nothing. no id no origin no ink" },
+    { "say": "stranger", "text": "see you on page 15" },
+    { "narr": "End of chapter one." },
+    { "end": true }
+  ]
+}

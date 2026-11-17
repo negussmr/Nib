@@ -1,0 +1,9 @@
+{
+  "player": "nib",
+  "characters": [
+    { "id": "nib",      "name": "Nib",   "avatar": "nib",     "ink": "#1B2F8A", "accent": "#D9362B" },
+    { "id": "pica",     "name": "Pica",  "avatar": "pica",    "ink": "#1E7A4F", "accent": "#1E7A4F" },
+    { "id": "hatch",    "name": "Hatch", "avatar": "hatch",   "ink": "#26262B", "accent": "#C8322A" },
+    { "id": "stranger", "name": "???",   "avatar": "mystery", "ink": "#C8322A", "accent": "#C8322A" }
+  ]
+}
